@@ -1,0 +1,180 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Lucy Redcay</title>
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    @Styles.Render("~/css/camera.css")
+    @Styles.Render("~/css/style.css")
+    @Styles.Render("~/css/owl.carousel.css")
+    @Scripts.Render("~/js/jquery.js")
+    @Scripts.Render("~/js/jquery-migrate-1.1.1.js")
+    @Scripts.Render("~/js/jquery.easing.1.3.js")
+    @Scripts.Render("~/js/script.js")
+    @Scripts.Render("~/js/superfish.js")
+    @Scripts.Render("~/js/jquery.ui.totop.js")
+    @Scripts.Render("~/js/jquery.mobilemenu.js")
+    @Scripts.Render("~/js/camera.js")
+    @Scripts.Render("~/js/owl.carousel.js")
+    @Scripts.Render("~/js/sForm.js")
+    <!--[if (gt IE 9)|!(IE)]><!-->
+    @Scripts.Render("~/js/jquery.mobile.customized.min.js")
+    <!--<![endif]-->
+    <script>
+        $(document).ready(function () {
+            // Slider
+            jQuery('#camera_wrap').camera({
+                loader: false,
+                pagination: true,
+                minHeight: '150',
+                thumbnails: false,
+                height: '42.81115879828326%',
+                caption: true,
+                navigation: false,
+                fx: 'mosaic'
+            });
+
+            $().UItoTop({ easingType: 'easeOutQuart' });
+
+            var owl = $("#owl");
+
+            owl.owlCarousel({
+                items: 3, //10 items above 1000px browser width
+                itemsDesktop: [995, 3], //5 items between 1000px and 901px
+                itemsDesktopSmall: [767, 1], // betweem 900px and 601px
+                itemsTablet: [700, 1], //2 items between 600 and 0
+                itemsMobile: [479, 1], // itemsMobile disabled - inherit from itemsTablet option
+                navigation: true,
+                pagination: false
+            });
+
+        });
+
+        (function ($) {
+            $.fn.UItoElement = function (elementId) {
+                var posTo = $('#' + elementId).offset().top;
+                $('html, body').stop().animate({ scrollTop: posTo }, 800, 'easeOutQuart');
+                return false;
+            }
+        })(jQuery);;
+    </script>
+    <!--[if lt IE 8]>
+       <div style=' clear: both; text-align:center; position: relative;'>
+         <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+           <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+         </a>
+      </div>
+    <![endif]-->
+    <!--[if lt IE 9]>
+        @Scripts.Render("~/js/html5shiv.js")
+        @Styles.Render("~/css/ie.css")
+    <![endif]-->
+
+</head>
+<body>
+    <section class="bg1">
+
+        <!--==============================header=================================-->
+        <header id="header">
+            <div class="container_12">
+                <div class="grid_12 block">
+                    <h1>
+                    
+                    <a href="/"><span style="color: #ff6100">Lucy</span>
+                    <span>Redcay</span>
+    @*<img src="/images/logo.png" alt="">*@</a></h1>
+                    <div class="socials">
+                        <a class="a1" href="#"><span class="icon5"></span></a>
+                        <a class="a1" href="#"><span class="icon6"></span></a>
+                        <a class="a1" href="#"><span class="icon7"></span></a>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                @RenderSection("fma", required: false)
+                <div class="grid_12 bg2">
+                    <nav class="horizontal-nav full-width horizontalNav-notprocessed">
+                        <ul class="sf-menu">
+                            <li class="current"><a href="/">Home</a></li>
+                            <li>
+                                <a href="#" onclick="$().UItoElement('Welcome');">Services</a>
+                                @*<ul>
+                                    <li><a href="#">Lorem est</a></li>
+                                    <li>
+                                        <a href="#">Dolore</a>
+                                        <ul>
+                                            <li><a href="#">Massa</a></li>
+                                            <li><a href="#">Feipsum</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Laoreetum</a></li>
+                                </ul>*@
+                            </li>
+                            <li><a href="#" onclick="$().UItoElement('Publications');">Publications</a></li>
+                            @*<li><a href="index-3.html">Candidates</a></li>
+                            <li><a href="index-4.html">Online jobs</a></li>*@
+                            <li><a href="#" onclick="$().UItoElement('ContactUs');">Contact Me</a></li>
+                        </ul>
+                    </nav>
+                    <div class="p2">Contact Me 1-888-555-1212</div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </header>
+        <!--==============================end header=================================-->
+
+        <!--==============================content================================-->
+
+        @RenderBody()
+
+        <!--==============================end content============================-->
+        <!--===================footer=====================-->
+
+        <section class="bg5 mrg12">
+            <footer>
+                <div class="container_12">
+                    <div class="grid_6">
+                        <div class="brd3">
+                            <h6>Sign Up to Email</h6>
+                            <div class="mrg5">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquaUt enim ad minim veniam, quis nostrud exercitation.</div>
+                            <form id="newsletter1">
+                                <div class="success">Your subscription request<br> has been sent!</div>
+                                <fieldset>
+                                    <label class="email">
+                                        <input type="email" value="">
+                                        <span class="error">*This is not a valid email address.</span>
+                                    </label>
+                                    <a href="#" data-type="submit" class="a10">submit</a>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="grid_3" id="ContactUs">
+                        <div class="brd3">
+                            <h6>our Location</h6>
+                            <address>
+                                <dl>
+                                    <dt class="mrg7">
+                                        408 South School Ln,<br>
+                                        Lancaster, PA 17603
+                                    </dt>
+                                    <dd>Freephone:&nbsp;&nbsp;<span class="p20">+1 800 555 1212</span></dd>
+                                    <dd>Telephone:&nbsp;&nbsp;<span class="p20">+1 800 555 1212</span></dd>
+                                    <dd>FAX:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="p20">+1 800 555 1212</span></dd>
+                                </dl>
+                            </address>
+                        </div>
+                    </div>
+                    <div class="grid_3">
+                        <h6>copyright</h6>
+                        <h1><a href="index.html">Lucy Redcay@*<img src="images/logo_footer.png" alt="">*@</a></h1>
+                        <p class="privacy">&copy; <span id="copyright-year"></span>&nbsp;|&nbsp;<a href="index-6.html"> Privacy Policy</a></p>
+                    </div>
+                </div>
+            </footer>
+        </section>
+    </section>
+</body>
+</html>

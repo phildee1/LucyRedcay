@@ -1,0 +1,229 @@
+/*----------Form---------*/
+#form {
+	font-size: 12px;
+	line-height: 16px;
+}
+#form input {
+	width: 416px;
+	background-color: #fff;
+	border: 1px solid #e9ebe5;
+	position: relative;
+	height: 41px;
+	box-sizing: border-box;
+	-webkit-appearance: none;
+	-moz-box-sizing: border-box; /*Firefox 1-3*/
+	-webkit-box-sizing: border-box; /* Safari */
+	color: #83868a;
+    font-size: 12px;
+    line-height: 18px;
+    font-family: 'Ubuntu', sans-serif;
+	padding: 10px 16px 10px;
+}
+#form ._placeholder {
+	color: #83868a;
+    font-size: 12px;
+    line-height: 18px;
+    font-family: 'Ubuntu', sans-serif;
+	transition: 0.5s ease;
+	-o-transition: 0.5s ease;
+	-webkit-transition: 0.5s ease;
+	border: 1px solid transparent;
+	height: 42px !important;
+	padding: 11px 14px 10px;
+	width: 100% !important;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box; /*Firefox 1-3*/
+	-webkit-box-sizing: border-box; /* Safari */
+	position: absolute;
+	right: 0 !important;
+	top: 0 !important;
+	bottom: 0 !important;
+	left: 0 !important;
+	display: block;
+}
+#form textarea {
+	position: relative;
+	width: 100%;
+ 	background-color: #fff;
+	height: 138px;
+	resize: none;
+	box-sizing: border-box;
+	-webkit-appearance: none;
+	-moz-box-sizing: border-box; /*Firefox 1-3*/
+	-webkit-box-sizing: border-box; /* Safari */
+	margin: 0;
+	position: relative;
+	color: #83868a;
+    font-size: 12px;
+    line-height: 18px;
+    font-family: 'Ubuntu', sans-serif;
+	padding: 10px 16px 10px;
+	overflow: hidden;
+	border: 1px solid #e9ebe5;
+}
+#form label {
+	position: relative;
+	display: block;
+	min-height: 49px;
+	cursor: text;
+	width: 460px;
+}
+
+#form label.message {
+	width: 100%;
+	margin-left: 0;
+}
+
+#form .error-message, #form .empty-message {
+	color: #fe0410;
+    font-size: 11px;
+    line-height: 21px;
+	width: auto;
+	position: absolute;
+	z-index: 999;
+    font-family: 'Ubuntu', sans-serif;
+	top: 0px;
+	opacity: 0;
+	right: 52px;
+	float: left;
+	transition: 0.5s ease;
+	-o-transition: 0.5s ease;
+	-webkit-transition: 0.5s ease;
+}
+
+#form .message ._placeholder  {
+	height: 100% !important;
+}
+
+#form .invalid .error-message, #form .empty .empty-message {
+	opacity: 1;
+}
+
+.btns {
+	text-align: right;
+	padding-top: 32px;
+}
+
+.btns a.btn {
+	clear: both;
+	font-size: 14px;
+	padding-right: 0;
+	position: relative;
+	line-height: 21px;
+    font-family: 'Ubuntu', sans-serif;
+	color: #3d3d3d;
+	display: inline-block;
+	height: 30px;
+	margin-left: 10px;
+	padding: 10px 47px 0;
+	border-radius: 26px;
+	border: 1px solid #d8d6d6;
+	-webkit-box-shadow: 1px 1px 1px 0 rgba(0,0,0,0.3);  
+	box-shadow: 1px 1px 1px 0 rgba(0,0,0,0.3);
+	background: url('../images/link2.png') repeat-x;
+}
+a.btn:hover{
+	color: #ff6100;
+}
+.message br {
+	height: 0;
+	line-height: 0;
+}
+#form .success-message {
+	display: none; 
+	opacity: 0; 
+	position: absolute;
+	width: 100%;
+	height: 90px;
+	background-color: #fff;
+	color: #b3b3b3;
+    font-size: 13px;
+    line-height: 20px;
+	text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+	border: 1px solid #e9ebe5;
+	padding: 36px 10px;
+	z-index: 999;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box; /*Firefox 1-3*/
+	-webkit-box-sizing: border-box; /* Safari */
+	transition: 0.5s ease;
+	-o-transition: 0.5s ease;
+	-webkit-transition: 0.5s ease;
+}
+
+#form.success .success-message {
+	display: block;
+	opacity: 1;
+}
+.success_wrapper {
+	position: relative;	
+}
+
+#form ._placeholder.hidden {
+	display: none;
+}
+#form ._placeholder.focused {
+	opacity: 0.3;
+}
+
+
+@media only screen and (max-width: 995px) {
+	#form label {
+		float: none !important;	
+		width: 100%;
+	}
+
+	#form input {
+		margin-bottom: 10px;
+	}
+
+	#form .success {
+		width: 100%;
+	}
+
+	.btns {
+		padding-right: 0;
+	}
+
+	#form label.email {
+		width: 100%;
+		margin: 0;
+	}
+  	#form input{
+  		width: 100%;
+  	}
+	.map figure {
+		float: left !important;
+	}
+ 	#form .success-message{
+ 		height: 94px;
+ 	}
+
+}
+
+@media only screen and (max-width: 767px) {
+	.map figure {
+		width: 100% !important;
+		float: none !important;
+		display: block !important;
+		margin: 0 0 25px !important;
+		text-align: center;
+	}
+  	.btns {
+		padding-bottom: 0;  
+  	}
+ 	#form textarea {
+		height: 300px !important; 
+  	}
+   	#form {
+ 		padding-right: 0;
+ 	}
+
+}
+@media only screen and (max-width: 479px) {
+
+ 	#form textarea {
+		height: 200px !important;  
+  	}
+}

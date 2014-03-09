@@ -1,0 +1,130 @@
+.sf-menu{
+	float: left;
+}
+.sf-menu>li{
+	position: relative;
+	float: left;
+}
+.sf-menu li a{
+	font-weight: bold;
+	color: #fff;
+	font-family: 'Archivo Narrow', sans-serif; 
+	font-size: 14px;
+	text-transform: uppercase;
+}
+.sf-menu>li>a:hover, .sf-menu>li.current>a, .sf-menu>li.sfHover>a{
+	background-color: #ff6100;
+	position: relative;
+	z-index: 5;
+}
+.sf-menu>li>a{
+	text-align: center;
+	padding: 22px 23px 21px;
+	display: block;
+	text-shadow: 1px 1px 1px #384d5e;
+}
+.sf-menu ul{
+	position: absolute;
+	z-index: 1000;
+	min-width: 156px;
+	padding: 20px 0 28px;
+	background-color: #4d6b81;
+	top: 64px;
+	left: 0;
+}
+.sf-menu ul li{
+	padding-left: 28px;
+	position: relative;
+}
+.sf-menu ul ul{
+	left: 156px;
+	top: 0;
+	min-width: 102px;
+	padding: 6px 0 5px;
+	background: #ff6100;
+}
+.sf-menu ul ul li{
+	padding-left:  23px;
+}
+.sf-menu ul li a{
+	color: #fff;
+	line-height: 15px;
+	font: 10px/30px Arial, sans-serif;
+}
+.sf-menu ul li a:hover{
+	color: #ff6100;
+}
+.sf-menu ul ul a:hover{
+	color: #000;
+}
+.sf-menu ul li+li{
+	padding-top: 4px;
+}
+.sf-menu ul ul li+li{
+	padding-top: 2px;
+}
+.sf-menu a.sf-with-ul:before {
+	content: '';
+	background: url('../images/arrow.png') 0 0 no-repeat;
+	width: 5px;
+	left: 50%;
+	margin-left: -2px;
+	top: 44px;
+	display: block;
+	position: absolute;
+	height: 4px;
+}
+.sf-menu ul li a.sf-with-ul:before {
+	content: '';
+	background: url('../images/arrow1.png') 0 0 no-repeat;
+	width: 4px;
+	right: 20px;
+	bottom: 13px;
+	display: block;
+	position: absolute;
+	height: 5px;
+	left: auto;
+	top: auto;
+}
+
+.sf-menu>li+li:before{
+	content: '';
+	position: absolute;
+	width: 1px;
+	height: 24px;
+	background: #adadad;
+	left: 0;	
+	top: 20px;
+}
+
+.sf-menu>li:hover+li:before,
+.sf-menu>li.sfHover+li:before,
+.sf-menu>li.current+li:before {
+	display: none;
+}
+
+/*==================================RESPONSIVE LAYOUTS===============================================*/
+@media only screen and (max-width: 995px) {
+	.sf-menu>li>a {
+		font-size: 11px;
+	}
+	.sf-menu>li>a{
+		padding: 22px 17px 21px;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+
+	.sf-menu{display:none !important; float: none;}
+
+	#mm0{
+		font:12px/15px Arial, Helvetica, sans-serif;
+		color:#202020;
+		width:100%;
+		margin: 0 auto 10px;
+		float: none;
+    	outline: none;
+		border:1px solid #474646;
+	}
+	
+}
